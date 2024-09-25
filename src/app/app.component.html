@@ -1,5 +1,13 @@
 <!-- Angular Attribute Directives -->
 
-<!-- ng Style Directive: so in this we first have to give provide the style and what we want to change either color of textTransformation then we will give the variable which we have made in TS file and then we will tell which color we want to get we will tell two colors either this or that, according to the value of variable inside the ts file -->
+<!-- style directive using the easy approach if we have less number of colors: so in this we first have to give provide the style and what we want to change either color of textTransformation then we will give the variable which we have made in TS file and then we will tell which color we want to get we will tell two colors either this or that, according to the value of variable inside the ts file -->
 
 <h1 [style.color]="isLoggedIn?'green':'red'" [style.textTransform]="isLoggedIn?'uppercase': 'lowercase' " >Welcome Admin</h1>
+
+<!-- ngStyle Directive: So in this first we will give the directive name inside the [] and then we will first give the color inside the {''} and the after the : we will give the variable name from ts file and by using the ? we will give the color inside the '' if the value of the variable is true and by using : we will give the color inside the '' if the value is false. and inside the ngStyle we dont have to add the [ngStyle] again for our 2nd condition, we can just put , after our first cindition and then simply tell our 2nd condition -->
+
+<h2 [ngStyle]="{ 
+    'color': isLoggedIn ? 'green': 'red',
+    'textTransform': isLoggedIn ? 'uppercase': 'lowercase'
+
+}" >Ng Style Directive</h2>
