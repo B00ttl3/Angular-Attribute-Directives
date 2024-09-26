@@ -15,3 +15,10 @@
 <!-- NgClass means class binding. means instead of changing css in line we can make new class inside the css file and then we can attach that one class here. So, first we have to make css class in css file and as we are working with two examples one is true and one is false so we have to make 2 css classes. after that we will use the class binding function using class and class name after . inside the [] and give them the variable inside the "". So, we attached two classes one for true and one for false -->
 
 <h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn" >Class Binding</h1>
+
+<!-- Ng Class Directive: its same as ngStyle. first we have to import NgClass inside the imports in ts file, then we just have to add it in here. we dont have to make new ngClass if we want to add more than one class. we just have to add , and then put the other class's condition ahead of it. -->
+
+<h2 [ngClass]="{ 
+    'login': isLoggedIn,
+    'logout': !isLoggedIn 
+    }" >Ng Class Directive</h2>

@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
-import { NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,13 +18,14 @@ import { NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTempla
     NgSwitch, 
     NgSwitchCase, 
     NgSwitchDefault, 
-    NgStyle],
+    NgStyle,
+    NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title: string = 'This loaded dynamically'
   
-  isLoggedIn: boolean = false;
+  isLoggedIn: boolean = true;
 
 }
