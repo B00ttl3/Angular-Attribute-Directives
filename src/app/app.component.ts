@@ -25,6 +25,6 @@ import { NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTempla
 export class AppComponent {
   title: string = 'This loaded dynamically'
   
-  isLoggedIn: boolean = true;
+  isLoggedIn: boolean = false;
 
 }

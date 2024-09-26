@@ -6,8 +6,12 @@
 
 <!-- ngStyle Directive: So in this first we will give the directive name inside the [] and then we will first give the color inside the {''} and the after the : we will give the variable name from ts file and by using the ? we will give the color inside the '' if the value of the variable is true and by using : we will give the color inside the '' if the value is false. and inside the ngStyle we dont have to add the [ngStyle] again for our 2nd condition, we can just put , after our first cindition and then simply tell our 2nd condition -->
 
-<h2 [ngStyle]="{ 
+<!-- <h2 [ngStyle]="{ 
     'color': isLoggedIn ? 'green': 'red',
     'textTransform': isLoggedIn ? 'uppercase': 'lowercase'
 
-}" >Ng Style Directive</h2>
+}" >Ng Style Directive</h2> -->
+
+<!-- NgClass means class binding. means instead of changing css in line we can make new class inside the css file and then we can attach that one class here. So, first we have to make css class in css file and as we are working with two examples one is true and one is false so we have to make 2 css classes. after that we will use the class binding function using class and class name after . inside the [] and give them the variable inside the "". So, we attached two classes one for true and one for false -->
+
+<h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn" >Class Binding</h1>
